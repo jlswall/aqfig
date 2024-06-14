@@ -1,0 +1,11 @@
+# Based on the default NAMESPACE created by R, but since edited.
+
+# Export all names
+exportPattern(".")
+
+# Import specific functions from other packages.
+importFrom("geoR", points.geodata)
+importFrom("grDevices", "colorRampPalette", "grey", "heat.colors")
+importFrom("graphics", "abline", "axis", "box", "image", "legend", "par",
+    "plot")
+importFrom("stats", "lm")
