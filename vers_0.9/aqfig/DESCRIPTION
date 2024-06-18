@@ -9,4 +9,4 @@ Imports: graphics, grDevices, stats, geoR
 Suggests: maps
 Description: Contains functions to help display air quality model output and monitoring data, such as creating color scatterplots, color legends, etc.
 License: Unlimited
-LazyLoad: yes
+LazyData: true
