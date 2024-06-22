@@ -2,7 +2,7 @@ Package: aqfig
 Type: Package
 Title: Functions to Help Display Air Quality Model Output and Monitoring Data
 Version: 0.9
-Date: 2024-06-18
+Date: 2024-06-21
 Author: Jenise Swall, with contributions from Kristen Foley
 Maintainer: Jenise Swall <jswall@vcu.edu>
 Imports: graphics, grDevices, stats, geoR
