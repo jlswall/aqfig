@@ -57,7 +57,7 @@ plot3d.points(x, y, z, zlim = range(z, na.rm = TRUE),
   and maximum amounts to shrink/expland the points, based on the
   value of \code{z}.  By default, these are both set to one, which
   makes all the points the same size. For more information, see
-  the help page for \code{\link{points.geodata}}.
+  the help page for \code{\link[geoR]{points.geodata}}.
 
   \item{symbol.border.col}{This controls the color of the border around
   the plotting symbol.  By default, it is black.  If a border is not
@@ -78,7 +78,7 @@ plot3d.points(x, y, z, zlim = range(z, na.rm = TRUE),
 }
 
 
-\details{This function is a wrapper to the \code{\link{points.geodata}}
+\details{This function is a wrapper to the \code{\link[geoR]{points.geodata}}
   function in the geoR package.
 }
 
@@ -93,7 +93,7 @@ plot3d.points(x, y, z, zlim = range(z, na.rm = TRUE),
 \author{Jenise Swall}
 
 
-\seealso{\code{\link{points.geodata}}, \code{\link{points}}}
+\seealso{\code{\link[geoR]{points.geodata}}, \code{\link{points}}}
 
 \examples{
 
