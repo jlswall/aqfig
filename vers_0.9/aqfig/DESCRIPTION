@@ -1,12 +1,13 @@
 Package: aqfig
 Type: Package
-Title: Functions to Help Display Air Quality Model Output and Monitoring Data
 Version: 0.9
-Date: 2024-06-21
-Author: Jenise Swall, with contributions from Kristen Foley
-Maintainer: Jenise Swall <jswall@vcu.edu>
+Date: 2024-06-26
+Title: Display Air Quality Model Output and Monitoring Data
+Authors@R: c(person("Jenise", "Swall", role = c("aut", "cre"),
+                     email = "jswall@vcu.edu"),
+             person("Kristen", "Foley", role = "ctb"))
 Imports: graphics, grDevices, stats, geoR
 Suggests: maps
-Description: Contains functions to help display air quality model output and monitoring data, such as creating color scatterplots, color legends, etc.
+Description: Display air quality model output and monitoring data using scatterplots, grids, and legends.
 License: Unlimited
 LazyData: true
