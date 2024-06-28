@@ -120,7 +120,6 @@ data(ozone1)
 data(ozone2)
 z.rng <- c(40, 90)
 col.rng <- rev(rainbow(n=10, start=0, end=4/6))
-dev.new()
 plot3d.points(x=ozone2$longitude, y=ozone2$latitude, z=ozone2$daily.max,
               xlab="longitude", ylab="latitude", col=col.rng,
               zlim=z.rng, cex.min=0.5, cex.max=1.5)
@@ -139,11 +138,10 @@ vertical.image.legend(col=col.rng, zlim=z.rng)
 x <- 1:9
 y <- 1:9
 z <- c(0, 47:53, 100)
-dev.new()
-par(mfrow=c(1,3))
 col.rng <- rev(rainbow(n=7, start=0, end=4/6))
 plot3d.points(x, y, z, col=col.rng)
 text(x, y+0.2, z, cex=0.8)
+
 # In vain, you might try to "fix" this by setting zlim so that the
 # color range reflects the main portion of the z values.  You may
 # assume that the outlying value(s) will show up in the extreme edges
@@ -151,6 +149,7 @@ text(x, y+0.2, z, cex=0.8)
 # outlying values won't be plotted.
 plot3d.points(x, y, z, col=col.rng, zlim=c(47, 53))
 text(x, y+0.2, z, cex=0.8)
+
 # Instead, specify zlim to reflect the main porition of the z values,
 # and set plt.beyond.zlim=TRUE.  Now, z values below zlim[1] will be
 # plotted in the same color as zlim[1]; those above zlim[2] will be
