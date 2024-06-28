@@ -1,7 +1,7 @@
 Package: aqfig
 Type: Package
 Version: 0.9
-Date: 2024-06-26
+Date: 2024-06-27
 Title: Display Air Quality Model Output and Monitoring Data
 Authors@R: c(person("Jenise", "Swall", role = c("aut", "cre"),
                      email = "jswall@vcu.edu"),
