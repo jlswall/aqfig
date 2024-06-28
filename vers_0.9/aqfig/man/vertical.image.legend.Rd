@@ -26,14 +26,10 @@ vertical.image.legend(zlim, col)
 \details{This function works best when there is only one plot on the
   device, in which case the margin space is straightforward (no
   confusion between \code{oma}/\code{omi} and \code{mar}/\code{mai},
-  etc.  Originially, this function also assumed that the user had
-  already finished making the main portion of the plot before adding the
-  legend; i.e., the user should \strong{add the legend last}.  While the
-  author believes that this issue has been resolved, the author
-  recommends that the user avoid changing the main plot after using this
-  legend command.  This function alters the \code{\link{par}} settings
-  to draw the legend, and trying to reset them properly is not
-  straightforward.}
+  etc.  The user should finish making the main portion of the plot before adding
+  the legend; i.e., the user should \strong{add the legend last}.  This function
+  alters the \code{\link{par}} settings to draw the legend.  Upon exit, it
+  resets them back to what they were before the function call.}
 
 \value{Puts vertical color bar legend to the right of the plot.}
 
