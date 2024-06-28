@@ -13,14 +13,9 @@
 # RESULT: Puts vertical color bar legend to the right of the plot.
 #
 # ASSUMES:
-#    1. Originally, this function assumed that the user had already
-#       finished making the main portion of the plot; i.e., it
-#       required that the user should ADD THE LEGEND LAST.  While the
-#       author believes this issue has been fixed, the author still
-#       recommends that the user avoid changing the main plot after
-#       using this legend command.  This function alters the par()
-#       settings to draw the legend, and trying to reset them
-#       properly is not straightforward.
+#    1. The user is adding the legend *last*.  The CRAN rules now require
+#       that functions which alter the par() settings must reset them on exit
+#       to what they previously were.
 #    2. This function works best when there is only one plot on the
 #       device.
 #
@@ -50,15 +45,23 @@
 #    rather than the endpoints.
 #
 #  2024-06-14 (JLS):  Updated code formatting.
+#
+#  2024-06-27 (JLS):  The rules for CRAN require that when the function exits,
+#    the user's original par settings *must* be restored. As directed by
+#    CRAN, the on.exit() function is now used to ensure that the user's original
+#    par settings will be reset to what they were before function was called.
 # ###########################################################
 vertical.image.legend <- function(zlim, col){
 
 
-  # Get the current par information.  We restore these settings
-  # before we leave this function.
+  # Get the current graphical parameters ("par") information before doing
+  # anything to change them.
   starting.par.settings <- par(no.readonly=TRUE)
-
-
+  # Ensure that when this function is exited (naturally or with an error), the
+  # par settings are returned to the these starting settings.
+  on.exit(par(starting.par.settings))
+  
+  
   # Find information about the overall size of the figure and the
   # margins included with that figure.
   mai <- par("mai")
@@ -98,12 +101,4 @@ vertical.image.legend <- function(zlim, col){
         col=col, xlab="", ylab="", xaxt="n", yaxt="n")
   axis(4, mgp = c(3, 0.2, 0), las = 2, cex.axis=0.5, tcl=-0.1)
   box()
-
-
-  # Return par settings to what they were when we entered this
-  # function.  This is closely based on what is done in at the end
-  # of the image.plot() function in the "fields" package.
-  mfg.settings <- par()$mfg
-  par(starting.par.settings)
-  par(mfg=mfg.settings, new=FALSE)
 }
