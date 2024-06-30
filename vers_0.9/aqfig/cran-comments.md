@@ -15,7 +15,7 @@ title or similar.
   on.exit(par(oldpar)) # code line i + 1
 
 * Calls to par() and dev.new() in the documentation examples have been removed to
-  allow users to exercise their own preferences as when dispalying the example
+  allow users to exercise their own preferences as when displaying the example
   graphs.
 
 * In a previous submission, I fixed the \link{} targets to include a reference
