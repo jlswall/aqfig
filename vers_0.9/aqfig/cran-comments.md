@@ -5,6 +5,9 @@ title or similar.
 
 * The redundant "Functions to" at the start of the title has been removed.
 
+* I've identified the author/maintainer and a contributor to the package using
+  the "Authors@R" field as suggested.
+
 * The vertical.image.legend() function ensures that user's par settings are
   reset to the originals upon function exit, using on.exit() as given in the
   example:
@@ -32,3 +35,8 @@ title or similar.
   Package was archived on CRAN
   
 This is a re-submission of a previously archived package
+
+
+## Thanks
+
+* Thanks to Benjamin Altmann for his helpful suggestions.
